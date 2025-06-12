@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | MyPortfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #e6f0fa 0%, #f6f8fd 70%, #dbeafe 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      
+      justify-content: center;
+    }
+    .login-card {
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 6px 28px 0 rgba(86, 118, 225, 0.13);
+      padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+      min-width: 320px;
+      max-width: 92vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      animation: pop-in 1s cubic-bezier(.55,.09,.51,.99);
+    }
+    @keyframes pop-in {
+      0% { opacity: 0; transform: scale(0.93) translateY(40px);}
+      100% { opacity: 1; transform: scale(1) translateY(0);}
+    }
+    .login-card .login-icon {
+      background: linear-gradient(90deg, #67c8ff 60%, #6b85e8 100%);
+      color: #fff;
+      font-size: 2.3rem;
+      border-radius: 50%;
+      padding: 18px 19px 17px 19px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 20px 0 rgba(86, 118, 225, 0.18);
+    }
+    .login-card h2 {
+      margin: 0 0 16px 0;
+      font-size: 2rem;
+      color: #243c74;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .login-card form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin-top: 12px;
+    }
+    .login-card input {
+      padding: 13px 15px;
+      font-size: 1.05rem;
+      border-radius: 1em;
+      border: 1.5px solid #e3eaf8;
+      background: #f6fafd;
+      outline: none;
+      transition: border 0.18s;
+      font-family: inherit;
+    }
+    .login-card input:focus {
+      border: 1.5px solid #67c8ff;
+    }
+    .login-btn-main {
+      background: linear-gradient(90deg, #5676e1 60%, #67c8ff 100%);
+      color: #fff;
+      font-weight: 700;
+      padding: 13px 0;
+      border-radius: 2em;
+      border: none;
+      margin-top: 8px;
+      font-size: 1.13rem;
+      box-shadow: 0 2px 12px 0 rgba(86, 118, 225, 0.09);
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.18s, box-shadow 0.16s, transform 0.13s;
+    }
+    .login-btn-main:hover {
+      background: linear-gradient(90deg, #243c74 60%, #67c8ff 100%);
+      box-shadow: 0 6px 18px 0 rgba(86, 118, 225, 0.15);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .login-card .extra-links {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      color: #5676e1;
+      font-size: 1rem;
+    }
+    .login-card .extra-links a {
+      color: #5676e1;
+      text-decoration: none;
+      margin-left: 6px;
+      font-weight: 500;
+      transition: color 0.18s;
+    }
+    .login-card .extra-links a:hover {
+      color: #38507a;
+      text-decoration: underline;
+    }
+    @media (max-width: 400px) {
+      .login-card {padding: 1.2rem 0.3rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <div class="login-icon">
+      <i class="fa-solid fa-right-to-bracket"></i>
+    </div>
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username or Email" required>
+      <input type="password" placeholder="Password" required>
+      <button class="login-btn-main" type="submit">Login</button>
+    </form>
+    <div class="extra-links">
+      <span>Forgot your password?</span>
+      <a href="#">Reset</a>
+    </div>
+  </div>
+</body>
+</html>
